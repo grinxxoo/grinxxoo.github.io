@@ -566,34 +566,21 @@
             <div id="articleContent">
                 <h3 id="给网站添加百度收录"><a href="#给网站添加百度收录" class="headerlink" title="给网站添加百度收录"></a>给网站添加百度收录</h3><p>给自己网站或者博客的底部加个显示百度收录精准数量，下图是效果图，很直观的看到详细的收录数量。</p>
 <h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><p><img src="/loading.gif" data-original="https://cdn.jsdelivr.net/gh/grinxxoo/bed/images/dibu1231241541.jpg" alt="效果浏览"></p>
-<h3 id="通用方法"><a href="#通用方法" class="headerlink" title="通用方法"></a>通用方法</h3><p>js：</p>
-<pre class=" language-js"><code class="language-js">  <span class="token operator">&lt;</span><span class="token operator">?</span>php <span class="token comment" spellcheck="true">//查询本站收录域名</span>
-<span class="token keyword">function</span> <span class="token function">baidu</span><span class="token punctuation">(</span>$baidu<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    $url<span class="token operator">=</span> $_SERVER<span class="token punctuation">[</span><span class="token string">'HTTP_HOST'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-  $baidu<span class="token operator">=</span><span class="token string">"http://api.jybkw.cn/baidu/?domain=$url"</span><span class="token punctuation">;</span>
-  $str <span class="token operator">=</span> <span class="token function">file_get_contents</span><span class="token punctuation">(</span>$baidu<span class="token punctuation">)</span><span class="token punctuation">;</span>
- <span class="token function">preg_match_all</span><span class="token punctuation">(</span><span class="token string">'/\d+/'</span><span class="token punctuation">,</span>$str<span class="token punctuation">,</span>$arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
-$arr<span class="token operator">=</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">,</span>$arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-echo $arr<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token operator">?</span><span class="token operator">></span></code></pre>
-<p>在<strong>footer.php</strong>文件中想要展示的地方插入以下代码：</p>
-<pre class=" language-php+HTML"><code class="language-php+HTML"><a><i class="fa fa-paw" aria-hidden="true"></i> 百度收录<?php echo baidu($baidu) ?>条</a></code></pre>
-<p>也可以在想要显示的地方直接加上以下代码：</p>
-<pre class=" language-php+HTML"><code class="language-php+HTML"><a><i class="fa fa-paw" aria-hidden="true"></i> 百度收录<?php echo baidu($baidu) ?>条</a>
+<h3 id="通用方法"><a href="#通用方法" class="headerlink" title="通用方法"></a>通用方法</h3><p>在想要显示的地方直接加上以下代码：</p>
+<pre class=" language-php"><code class="language-php"><span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">></span></span></span><span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-paw<span class="token punctuation">"</span></span> <span class="token attr-name">aria-hidden</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></span><span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span></span> 百度收录<span class="token delimiter">&lt;?php</span> <span class="token keyword">echo</span> <span class="token function">baidu</span><span class="token punctuation">(</span><span class="token variable">$baidu</span><span class="token punctuation">)</span> <span class="token delimiter">?></span>条<span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span></span>
 
-<script>
-  <?php //查询本站收录域名
-function baidu($baidu){
-    $url= $_SERVER['HTTP_HOST'];
-  $baidu="http://api.jybkw.cn/baidu/?domain=$url";
-  $str = file_get_contents($baidu);
- preg_match_all('/\d+/',$str,$arr);
-$arr=join('',$arr[0]);
-echo $arr;
-}
-?>
-</script></code></pre>
+<span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span></span>
+  <span class="token delimiter">&lt;?php</span> <span class="token comment" spellcheck="true">//查询本站收录域名</span>
+<span class="token keyword">function</span> <span class="token function">baidu</span><span class="token punctuation">(</span><span class="token variable">$baidu</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token variable">$url</span><span class="token operator">=</span> <span class="token variable">$_SERVER</span><span class="token punctuation">[</span><span class="token string">'HTTP_HOST'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token variable">$baidu</span><span class="token operator">=</span>"http<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//api.jybkw.cn/baidu/?domain=$url";</span>
+  <span class="token variable">$str</span> <span class="token operator">=</span> <span class="token function">file_get_contents</span><span class="token punctuation">(</span><span class="token variable">$baidu</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token function">preg_match_all</span><span class="token punctuation">(</span><span class="token string">'/\d+/'</span><span class="token punctuation">,</span><span class="token variable">$str</span><span class="token punctuation">,</span><span class="token variable">$arr</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$arr</span><span class="token operator">=</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">,</span><span class="token variable">$arr</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">echo</span> <span class="token variable">$arr</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token delimiter">?></span>
+<span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></span></code></pre>
 <h3 id="EMLOG用户"><a href="#EMLOG用户" class="headerlink" title="EMLOG用户"></a>EMLOG用户</h3><p>1· 在模板文件*<em>module.php *</em>加上以下代码：</p>
 <pre class=" language-js"><code class="language-js"><span class="token operator">&lt;</span><span class="token operator">?</span>php <span class="token comment" spellcheck="true">//查询本站收录域名</span>
 <span class="token keyword">function</span> <span class="token function">baidu</span><span class="token punctuation">(</span>$baidu<span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -606,7 +593,7 @@ echo $arr<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token operator">?</span><span class="token operator">></span></code></pre>
 <p>2· 然后底部插入文件 *<em>footer.php *</em>以下代码即可：</p>
-<pre class=" language-php+HTML"><code class="language-php+HTML"><a><i class="fa fa-paw" aria-hidden="true"></i> 百度收录<?php echo baidu($baidu) ?>条</a></code></pre>
+<pre class=" language-php"><code class="language-php"><span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">></span></span></span><span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-paw<span class="token punctuation">"</span></span> <span class="token attr-name">aria-hidden</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></span><span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span></span> 百度收录<span class="token delimiter">&lt;?php</span> <span class="token keyword">echo</span> <span class="token function">baidu</span><span class="token punctuation">(</span><span class="token variable">$baidu</span><span class="token punctuation">)</span> <span class="token delimiter">?></span>条<span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span></span></code></pre>
 <p>然后就会自动获取访问域名查询百度收录数量！</p>
 
             </div>
