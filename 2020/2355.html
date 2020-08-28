@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="给WordPress博客系统评论框显示用户UA, grin,grins,grinsのblog,记录,个人网站,博客">
+    <meta name="keywords" content="给WordPress博客系统评论框显示用户UA, grins,grinsのblog,记录,个人网站,博客">
     <meta name="description" content="基于资源收集与分享,记录随手笔记与灵感创作">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -565,7 +565,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p><strong>User Agent</strong>，简称 UA，通过HPPT头连同访问请求传递给服务器，使得服务器能够识别客户使用的操作系统及版本、CPU 类型、浏览器及版本、浏览器渲染引擎、浏览器语言、浏览器插件等，并依此为依据返回针对相应设备适配的网页和数据。</p>
-<p><img src="/loading.gif" data-original="http://demo.blog.2sxs.net/wp-content/uploads/2020/03/472735175-300x225.png" alt=""> 在WordPress中，用户提交评论甚至是用户访问，相应的UA信息都会储存到数据库中，如果感兴趣，可以查看WordPress数据库下的wp_comments表单，里面有一项comment_agent即是评论的UA信息。</p>
+<p><img src="http://demo.blog.2sxs.net/wp-content/uploads/2020/03/472735175-300x225.png" alt=""> 在WordPress中，用户提交评论甚至是用户访问，相应的UA信息都会储存到数据库中，如果感兴趣，可以查看WordPress数据库下的wp_comments表单，里面有一项comment_agent即是评论的UA信息。</p>
 <p>因此很轻易地，我们可以通过调用各条评论的UA，来显示评论者的操作系统和浏览器等信息。 </p>
 <p>在WordPress提供的函数中，如get_comment_author_IP可以直接调取评论者IP，但是同一数据表下的comment_agent却没有直接调取的函数。</p>
 <p>那么自己造一个函数吧。</p>
@@ -1399,11 +1399,6 @@ var OriginTitle = document.title;
      }
  });
 </script>
-<script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var r=0;r<l.length;r++)t=l[r],void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(t){var e,n,i,o,a=l[r];e=a,n=function(){l=l.filter(function(t){return a!==t})},i=new Image,o=e.getAttribute("data-original"),i.onload=function(){e.src=o,n&&n()},i.src=o}();var t,e}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</body>
 
 </html>
