@@ -383,7 +383,8 @@
 
 </header>
 
-    <style type="text/css">
+    
+<style type="text/css">
     /* don't remove. */
     .page404-cover {
         /* height: 75vh; */
@@ -401,9 +402,32 @@
       bottom: 0;
       margin: auto;
     }
+</style>
 
-/* 导航栏文字颜色 */
-    header .brand-logo .logo-span {
+ <script src="https://cdn.jsdelivr.net/gh/grinxxoo/cdn/source/libs/my404/bodymovin.js"></script>
+ <script src="https://cdn.jsdelivr.net/gh/grinxxoo/cdn/source/libs/my404/data.js"></script>
+<!--
+<script src=""></script>
+<script src=""></script>
+ -->
+<!-- 包含导航栏和页脚 -->
+<div class="bg-cover pd-header page404-cover">
+    <div id="svgContainer"></div>
+ 
+    <script type="text/javascript">
+        var svgContainer = document.getElementById('svgContainer');
+        var animItem = bodymovin.loadAnimation({
+          wrapper: svgContainer,
+          animType: 'svg',
+          loop: true,
+          animationData: JSON.parse(animationData)
+        });
+    </script>
+</div>
+
+/*导航栏颜色*/
+<style>
+header .brand-logo .logo-span {
       color: #222;
     }
  
@@ -418,25 +442,7 @@
     header .button-collapse i {
       color: #222;
     }
-</style>
- 
- 
-<script src=""></script>
-<script src=""></script>
- 
-<div class="bg-cover pd-header page404-cover">
-    <div id="svgContainer"></div>
- 
-    <script type="text/javascript">
-        var svgContainer = document.getElementById('svgContainer');
-        var animItem = bodymovin.loadAnimation({
-          wrapper: svgContainer,
-          animType: 'svg',
-          loop: true,
-          animationData: JSON.parse(animationData)
-        });
-    </script>
-</div>
+    </style>
 
     <footer class="page-footer bg-color">
     
