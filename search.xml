@@ -850,13 +850,13 @@
       
         <tags>
             
-            <tag> Gravatar </tag>
-            
             <tag> wordpress </tag>
             
-            <tag> 头像 </tag>
-            
             <tag> 网站日记 </tag>
+            
+            <tag> Gravatar </tag>
+            
+            <tag> 头像 </tag>
             
         </tags>
       
@@ -1032,11 +1032,11 @@
       
         <tags>
             
+            <tag> Nginx.SSL </tag>
+            
             <tag> wordpress </tag>
             
             <tag> 网站日记 </tag>
-            
-            <tag> Nginx.SSL </tag>
             
         </tags>
       
