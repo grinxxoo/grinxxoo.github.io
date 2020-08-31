@@ -138,7 +138,7 @@
       </li>
       
       <li>
-        <a href="/HTML/music">
+        <a href="/mymusic">
           
           <span>音乐</span>
         </a>
@@ -306,7 +306,7 @@
               
                 <li>
 
-                  <a href="/HTML/music " style="margin-left:75px">
+                  <a href="/mymusic " style="margin-left:75px">
 				  
 		          <span>音乐</span>
                   </a>
@@ -685,7 +685,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"游戏相关","value":3},{"name":"新闻事件","value":12},{"name":"网站日记","value":9},{"name":"资源分享","value":9},{"name":"网络流行","value":8},{"name":"实用教程","value":5},{"name":"白嫖活动","value":2}],
+                data: [{"name":"新闻事件","value":12},{"name":"实用教程","value":5},{"name":"网站日记","value":9},{"name":"游戏相关","value":3},{"name":"资源分享","value":9},{"name":"网络流行","value":8},{"name":"白嫖活动","value":2}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -824,6 +824,60 @@
 </main>
 
     <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/grinxxoo/cdn/source/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="360994850"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='none'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/grinxxoo/cdn/source/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
     
     <div class="container row center-align" style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
