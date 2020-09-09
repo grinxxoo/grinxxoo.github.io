@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>PE工具老毛桃带木马病毒 卸载安全软件进行恶意推广</title>
+      <link href="/2020/3dcd.html"/>
+      <url>/2020/3dcd.html</url>
+      
+        <content type="html"><![CDATA[<p><strong>近期，火绒收到用户反馈，称在使用老毛桃U盘启动装机工具制作的PE系统后，原有系统中多款安全软件被无故删除。</strong>火绒工程师溯源发现，上述使用老毛桃制作的PE系统中被植入了病毒，当用户使用该PE系统时，即会执行病毒模块，删除包括火绒、360杀毒等安全软件在内的指定软件。为了避免用户受到该病毒侵扰，火绒最新版已对该装机工具进行拦截查杀。</p><p><img src="https://cdn.jsdelivr.net/gh/grinxxoo/bed/images/9a86-iytwsaz8825249.png" alt="火绒拦截页面"></p><p>分析发现，该病毒模块除了删除安全软件外，还会替换浏览器中的各类设置，包括书签、收藏夹、新标签页、历史记录等，并且向原系统中安装360安全套装、2345加速浏览器等软件。其中，360套装包括360安全卫士和360浏览器，且在被推广安装后会默认锁定用户浏览器首页。</p><p>此外，火绒工程师通过进一步溯源发现，“老毛桃”所属旗下公司其它制作PE系统的工具如“大白菜超级U盘装机工具”和“晨枫工作室U盘启动盘制作工具”等均被植入上述木马病毒，存在删除安全软件、替换浏览器设置等恶意行为。</p><p>一直以来，第三方装机工具就是病毒、流氓软件的聚集地，由此类工具制作成的PE系统具备较高的权限，能随意植入恶意程序执行推广、捆绑等行为，甚至可以对抗、卸载安全类软件，对此，火绒工程师建议大家谨慎使用此类装机工具，避免遭遇安全风险。</p><h3 id="一、详细分析"><a href="#一、详细分析" class="headerlink" title="一、详细分析"></a>一、详细分析</h3><p>近日火绒收到用户反馈，在用户使用<a href="www.laomaotao.net#grins.top">老毛桃U盘启动</a>装机工具制作的PE系统后，原有系统中安装的多款安全软件会被“无故”删除。除此之外，在用户使用PE系统重启后，系统中会被安装360安全套装、2345加速浏览器等软件，且浏览器书签、收藏夹等位置会出现多个推广链接。病毒执行流程，如下图所示：</p><p><img src="https://cdn.jsdelivr.net/gh/grinxxoo/bed/images/953b-iytwsaz8825265.png" alt="病毒执行流程图"></p><p>当用户使用老毛桃制作PE盘并进入PE系统后，PECMD.EXE加载PECMD.INI配置文件执行，从IntelRaid.sys中解压执行TaoSet.exe模块。相关行为，如下图所示：</p><p><img src="https://cdn.jsdelivr.net/gh/grinxxoo/bed/images/9567-iytwsaz8825268.png" alt="解压并执行TaoSet模块"></p><p>TaoSet模块会从资源节中解出Deploy模块并调用DeployGhostDelta导出函数。DeployGhostDelta函数会根据配置文件删除用户系统中的软件。影响的软件如下：</p><p><img src="https://cdn.jsdelivr.net/gh/grinxxoo/bed/images/c9ec-iytwsaz8825789.png" alt="影响的软件列表"></p><p>影响的软件列表</p><p>相关现象，如下图所示：</p><p><img src="https://cdn.jsdelivr.net/gh/grinxxoo/bed/images/bddd-iytwsaz8825302.png" alt="删除用户系统中的软件"></p><p>删除操作相关配置数据，如下图所示：</p><p><img src="https://cdn.jsdelivr.net/gh/grinxxoo/bed/images/d883-iytwsaz8825673.png" alt="配置文件"></p><p>配置解析与删除文件操作相关代码，如下图所示：</p><p><img src="https://cdn.jsdelivr.net/gh/grinxxoo/bed/images/6b5a-iytwsaz8825670.png" alt="读取配置"></p><p><img src="https://cdn.jsdelivr.net/gh/grinxxoo/bed/images/9e91-iytwsaz8825720.png" alt="删除文件和注册表"></p><p>TaoSet会将自身（重命名为随机名）以及压缩后的推广软件拷贝到用户系统的Windows目录下，并添加开机启动。当用户退出PE系统进入原来的系统时，TaoSet模块便会加载执行。相关现象，如下图所示：</p><p><img src="https://cdn.jsdelivr.net/gh/grinxxoo/bed/images/3612-iytwsaz8825721.png" alt="开机启动执行"></p><p>替换浏览器的各种设置：书签、收藏夹、新标签页、历史记录等，其中包含自身的链接或带有推广号的推广链接。</p><p><img src="https://cdn.jsdelivr.net/gh/grinxxoo/bed/images/bca7-iytwsaz8825791.png" alt="替换浏览器设置"></p><p>影响的浏览器，如下图所示：</p><p><img src="https://cdn.jsdelivr.net/gh/grinxxoo/bed/images/4c69-iytwsaz8825299.png" alt="影响的浏览器"></p><p>TaoSet模块除了上述行为外，还会推广软件。目前推广的软件有360安全浏览器、360安全卫士、2345加速浏览器、WPS 2019和腾讯手游助手，且被推广的360安全卫士会默认锁定浏览器首页。安装推广软件在制作PE盘时可以取消，默认为勾选状态。</p><p><img src="https://cdn.jsdelivr.net/gh/grinxxoo/bed/images/1b4a-iytwsaz8825820.png" alt="推广软件开关"></p><h3 id="二、溯源分析"><a href="#二、溯源分析" class="headerlink" title="二、溯源分析"></a>二、溯源分析</h3><p>经过老毛桃的网站备案信息查询，老毛桃隶属于“东莞市互泰网络科技有限公司”。该公司旗下还有其他WinPE制作工具，如电脑店、大白菜装机工具等。经过分析发现，“大白菜超级U盘装机工具”和“晨枫工作室U盘启动盘制作工具”均带有此病毒。</p><p><img src="https://cdn.jsdelivr.net/gh/grinxxoo/bed/images/3c73-iytwsaz8825817.png" alt="旗下所有WinPE工具"></p><h3 id="三、附录"><a href="#三、附录" class="headerlink" title="三、附录"></a>三、附录</h3><p>病毒hash</p><p><img src="https://cdn.jsdelivr.net/gh/grinxxoo/bed/images/853d-iytwsaz8825848.png" alt="病毒hash"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 新闻事件 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 火绒 </tag>
+            
+            <tag> PE </tag>
+            
+            <tag> 计算机安全 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>福利美图 风之领域-泳装少女</title>
       <link href="/2020/1a9d.html"/>
       <url>/2020/1a9d.html</url>
@@ -20,9 +49,9 @@
       
         <tags>
             
-            <tag> 福利美图 </tag>
-            
             <tag> 绅士福利 </tag>
+            
+            <tag> 福利美图 </tag>
             
             <tag> 泳装 </tag>
             
@@ -815,9 +844,9 @@
       
         <tags>
             
-            <tag> 福利美图 </tag>
-            
             <tag> 绅士福利 </tag>
+            
+            <tag> 福利美图 </tag>
             
             <tag> 美女 </tag>
             
@@ -846,11 +875,11 @@
       
         <tags>
             
-            <tag> 福利美图 </tag>
-            
             <tag> 绅士福利 </tag>
             
             <tag> COS </tag>
+            
+            <tag> 福利美图 </tag>
             
         </tags>
       
@@ -1028,11 +1057,11 @@
       
         <tags>
             
-            <tag> 绅士福利 </tag>
-            
             <tag> 少女 </tag>
             
             <tag> 白丝 </tag>
+            
+            <tag> 绅士福利 </tag>
             
             <tag> 美图 </tag>
             
