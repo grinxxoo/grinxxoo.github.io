@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>【实战】用mt管理器微信内购酷我音乐</title>
+      <link href="/2020/7e38.html"/>
+      <url>/2020/7e38.html</url>
+      
+        <content type="html"><![CDATA[<p>其实这个内购也不是完善的，只能在购买专辑的时候使用，但是也应该够了。</p><p>互联网上也有很多酷我的pj版本（替酷我音乐默哀3秒钟…）</p><p>但是话又说回来，所谓pj版到底安不安全先不说，就它一打开就弹出个qq群啥的着实也是烦。</p><p>倒不如自己弄个内购用的安心，当然了， 有能力的还请多多支持正版。</p><p>主题开始：</p><p>首先你要有一个酷我音乐</p><p><img src="https://cdn.jsdelivr.net/gh/grinxxoo/bed/images/ac7cc7c4e3699138473333269b865ee.jpg" alt=""></p><p>然后还要有一个mt管理器（不需要会员），各大应用市场下载，酷我同理。</p><p>因为我手机安装的时候忘了关静默安装，所以安装完它还帮我删除了安装包【你可真是贴心了扒  (泪目）】</p><p>所以我用<a href="https://www.grins.top/2020/8b44.html" target="_blank" rel="noopener">x-plore</a>另外提取了安装包</p><p><img src="https://cdn.jsdelivr.net/gh/grinxxoo/bed/images/a74533c1dd6896bc0a8216b299bab23.jpg" alt=""></p><p>现在就可以正式开搞了</p><p>用mt管理器找到酷我安装包并点击查看</p><p><img src="https://cdn.jsdelivr.net/gh/grinxxoo/bed/images/9d6b95a33b8cc8762efdc0b60d2db04.jpg" alt=""></p><p>打开dex编辑器++ 并且<strong>cex文件全选</strong></p><p><img src="https://cdn.jsdelivr.net/gh/grinxxoo/bed/images/0139b3148b7a29e15d3203da192aa98.jpg" alt=""></p><p>然后在dex编辑器++里搜索<strong>支付成功</strong>，其他不用多做修改直接搜索</p><p><img src="https://cdn.jsdelivr.net/gh/grinxxoo/bed/images/fab8b3a870457dfc2451049385426cd.jpg" alt=""></p><p>然后搜到两个<strong>订单支付成功</strong> ，打开<strong>WXPayEntryActivity</strong>下面那个</p><p><img src="https://cdn.jsdelivr.net/gh/grinxxoo/bed/images/15998975801.jpg" alt=""></p><p>拉到最下面，<strong>把596-601行的pswitch_后面全改成58</strong>（如图所示）</p><p><img src="https://cdn.jsdelivr.net/gh/grinxxoo/bed/images/15998975251.jpg" alt=""></p><p>然后一路保存回去</p><p><img src="https://cdn.jsdelivr.net/gh/grinxxoo/bed/images/15998974681.jpg" alt=""></p><p>记得签名一下再安装</p><p><img src="https://cdn.jsdelivr.net/gh/grinxxoo/bed/images/eeef736ce7f5b98a8a0319eebe27645.jpg" alt=""></p><p>安装完随便登录一个账号，买个专辑试试（当然是买霉霉霉霉霉霉霉霉的辣），只能微信支付有效</p><p><img src="https://cdn.jsdelivr.net/gh/grinxxoo/bed/images/15998974181.jpg" alt=""></p><p>打完收工，来看看能不能听这张专辑了</p><p><img src="https://cdn.jsdelivr.net/gh/grinxxoo/bed/images/422e11d4392d5d3f775f01208dbec10.jpg" alt=""></p><p>完美！！！</p><p><img src="https://cdn.jsdelivr.net/gh/grinxxoo/bed/images/70ef2cc7402dd09e1ca6a35a85e008e.jpg" alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 实用教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 酷我 </tag>
+            
+            <tag> mt管理 </tag>
+            
+            <tag> 安卓 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>PE工具老毛桃带木马病毒 卸载安全软件进行恶意推广</title>
       <link href="/2020/3dcd.html"/>
       <url>/2020/3dcd.html</url>
@@ -875,11 +904,11 @@
       
         <tags>
             
+            <tag> COS </tag>
+            
             <tag> 福利美图 </tag>
             
             <tag> 绅士福利 </tag>
-            
-            <tag> COS </tag>
             
         </tags>
       
@@ -997,13 +1026,13 @@
       
         <tags>
             
-            <tag> wordpress </tag>
-            
-            <tag> 网站日记 </tag>
-            
             <tag> Gravatar </tag>
             
+            <tag> wordpress </tag>
+            
             <tag> 头像 </tag>
+            
+            <tag> 网站日记 </tag>
             
         </tags>
       
@@ -1179,11 +1208,11 @@
       
         <tags>
             
-            <tag> Nginx.SSL </tag>
-            
             <tag> wordpress </tag>
             
             <tag> 网站日记 </tag>
+            
+            <tag> Nginx.SSL </tag>
             
         </tags>
       
@@ -1351,9 +1380,9 @@
       
         <tags>
             
-            <tag> 语录 </tag>
-            
             <tag> 网络流行 </tag>
+            
+            <tag> 语录 </tag>
             
         </tags>
       
