@@ -384,6 +384,19 @@
 </header>
 
     
+<script src="https://cdn.jsdelivr.net/gh/grinxxoo/cdn/source/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('对不起，您没有权限浏览此文章')).toString(CryptoJS.enc.Hex)) {
+                alert('请不要尝试访问');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -763,7 +776,7 @@
 <!-- 直达评论 -->
 <div id="to_comment" class="comment-scroll">
     <a class="btn-floating btn-large waves-effect waves-light" href="#mvcomments" title="直达评论">
-        <i class="fas fa-commenting-o"></i>
+        <i class="fas fa-comments"></i>
     </a>
 </div>
     
