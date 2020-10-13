@@ -428,20 +428,18 @@
       <div class="card">
           <div class="card-content">
               <!-- artitalk -->
-              <script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-              <script>
-                var appID = "kRGoCrp5tzTSQzYyYQ4URopf-MdYXbMMI";
-                var appKEY = "lwMlVOYRozjc0nGb91Yw6v8i";
-                var per = "7"; //每页显示说说的数量
-                var username = "grin"; //Leancloud中设置的用户名
-                var placeholder1="只有grin才能评论哦";
-                var placeholder2="没有密码，不能评论！";
-                var lazy = 1;
-                var bgimg = "https://gitee.com/cungudafa/source/raw/master/img/gif/Sitich/Sitich16.gif";
-              </script>
-              <div id="artitalk_main"></div>
-              <script type="text/javascript" src="https://unpkg.com/artitalk"></script>
+<script type="text/javascript" src="https://unpkg.com/artitalk"></script>//引用artitalk
+<div id="artitalk_main"></div>//存放说说的容器
+<script>
+new Artitalk({
+    appId: 'Qy4J1c0oTBixzhgBuhPoAHq7-MdYXbMMI',
+    appKey: 'NXmLGLSUslGqETRc5Guem6H9',
+    pageSize: '5',
+    
+})
+</script>
               <!-- artitalk.end -->
+
               <!-- 自定义样式 -->
               <style>
                 .cbp_tmtimeline>li:nth-child(odd) .cbp_tmlabel {
