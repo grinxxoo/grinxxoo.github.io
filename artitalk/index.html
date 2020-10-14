@@ -428,9 +428,8 @@
       <div class="card">
           <div class="card-content">
               <!-- artitalk -->
-<script type="text/javascript" src="https://unpkg.com/artitalk"></script>//引用artitalk
-<div id="artitalk_main"></div>//存放说说的容器
-<script>
+<script type="text/javascript" src="https://unpkg.com/artitalk"></script>
+<div id="artitalk_main"></div>
 new Artitalk({
     appId: 'Qy4J1c0oTBixzhgBuhPoAHq7-MdYXbMMI',
     appKey: 'NXmLGLSUslGqETRc5Guem6H9',
@@ -439,42 +438,6 @@ new Artitalk({
 })
 </script>
               <!-- artitalk.end -->
-
-              <!-- 自定义样式 -->
-              <style>
-                .cbp_tmtimeline>li:nth-child(odd) .cbp_tmlabel {
-                  background: linear-gradient(-45deg, #3A405A, #AEC5EB, #F9DEC9, #E9AFA3) 0% 0% / 400% 400%;
-                  animation: 15s ease 0s infinite normal none running gradientBG;
-                  color: #3E4348;
-                }
-                .cbp_tmtimeline>li .cbp_tmlabel {
-                  background: linear-gradient(-45deg, #3A405A, #AEC5EB, #F9DEC9, #E9AFA3) 0% 0% / 400% 400%;
-                  animation: 15s ease 0s infinite normal none running gradientBG;
-                  color: #3E4348;
-                }
-                .cbp_tmtimeline>li:nth-child(odd) .cbp_tmlabel:after {
-                  border-right-color:  #AEC5EB
-                }
-                .cbp_tmtimeline>li .cbp_tmlabel:after {
-                  border-right-color:  #F9DEC9
-                }
-                .button {
-                  background: linear-gradient(-45deg, #3A405A, #AEC5EB, #F9DEC9, #E9AFA3) 0% 0% / 400% 400%;
-                  animation: 15s ease 0s infinite normal none running gradientBG;
-                  color: #3E4348;
-                }
-                @keyframes gradientBG {
-                    0% {
-                        background-position: 0% 50%;
-                    }
-                    50% {
-                        background-position: 100% 50%;
-                    }
-                    100% {
-                        background-position: 0% 50%;
-                    }
-                }
-              </style>
           </div>
       </div>
   </div>
@@ -689,24 +652,6 @@ $(function () {
     <script src="https://cdn.jsdelivr.net/gh/grinxxoo/cdn/source/libs/instantpage/instantpage.js" type="module"></script>
     
     
-<script type="text/javascript">
-var OriginTitle = document.title;
- var titleTime;
- document.addEventListener('visibilitychange', function () {
-     if (document.hidden) {
-         $('[rel="icon"]').attr('href', "//grins.oss-cn-shenzhen.aliyuncs.com/hexo/favicon-jh.ico");
-         document.title = '警告！您已违法我国网络安全法';
-         clearTimeout(titleTime);
-     }
-     else {
-         $('[rel="icon"]').attr('href', "//grins.oss-cn-shenzhen.aliyuncs.com/hexo/favicon-32x32.ico");
-         document.title = '欢迎回来! 网页已恢复！' + OriginTitle;
-         titleTime = setTimeout(function () {
-             document.title = OriginTitle;
-         }, 2000);
-     }
- });
-</script>
 </body>
 
 </html>

@@ -1207,24 +1207,6 @@ $(function () {
     <script src="https://cdn.jsdelivr.net/gh/grinxxoo/cdn/source/libs/instantpage/instantpage.js" type="module"></script>
     
     
-<script type="text/javascript">
-var OriginTitle = document.title;
- var titleTime;
- document.addEventListener('visibilitychange', function () {
-     if (document.hidden) {
-         $('[rel="icon"]').attr('href', "//grins.oss-cn-shenzhen.aliyuncs.com/hexo/favicon-jh.ico");
-         document.title = '警告！您已违法我国网络安全法';
-         clearTimeout(titleTime);
-     }
-     else {
-         $('[rel="icon"]').attr('href', "//grins.oss-cn-shenzhen.aliyuncs.com/hexo/favicon-32x32.ico");
-         document.title = '欢迎回来! 网页已恢复！' + OriginTitle;
-         titleTime = setTimeout(function () {
-             document.title = OriginTitle;
-         }, 2000);
-     }
- });
-</script>
 </body>
 
 </html>
