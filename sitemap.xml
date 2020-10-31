@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://grins.top/links/index.html</loc>
+    
+    <lastmod>2020-10-31T09:53:56.010Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://grins.top/mymusic/index.html</loc>
     
     <lastmod>2020-10-14T06:28:40.851Z</lastmod>
@@ -383,13 +390,6 @@
     <loc>https://grins.top/artitalk/index.html</loc>
     
     <lastmod>2020-07-02T09:47:52.918Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://grins.top/friends/index.html</loc>
-    
-    <lastmod>2020-07-01T08:16:27.412Z</lastmod>
     
   </url>
   
